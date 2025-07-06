@@ -4,8 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>Rock Paper Scissors</header>
+    <div class="scoreboard">
+      <div class="player" id="human">HUMAN</div>
+      <div class="player" id="comp">COMP</div>
+      <span id="human">0</span> : <span id="comp">0</span>
+    </div>
+
+    <div class="result">
+      <p>Paper covers rock! You win!</p>
+    </div>
+
+    <div class="choices">
+      <div id="rock" class="choice"></div>
+      <img src="img/rock.jpeg" />
+      <div id="paper" class="choice"></div>
+      <img src="img/paper.jpeg" />
+      <div id="scissors" class="choice"></div>
+      <img src="img/scissors.jpeg" />
+    </div>
+
+    <div>
+      <p class="cta">MAKE YOUR MOVE.</p>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

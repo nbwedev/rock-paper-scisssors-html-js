@@ -29,25 +29,3 @@ const playRound = (humanChoice, computerChoice) => {
     return `You lose! ${computerChoice} beats ${humanChoice}`;
   }
 };
-
-// Game logic when playing a whole match
-const playGame = () => {
-  let humanScore = 0;
-  let computerScore = 0;
-
-  for (let i = 0; i < 5; i++) {
-    const human = getHumanChoice();
-    const computer = getComputerChoice();
-    const result = playRound(human, computer);
-    console.log(result);
-
-    if (result.startsWith("You win")) {
-      humanScore++;
-    } else if (result.startsWith("You lose")) {
-      computerScore++;
-    }
-  }
-  console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
-};
-
-playGame();
