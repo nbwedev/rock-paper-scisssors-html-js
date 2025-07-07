@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Rock Paper Scissors</header>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
     <div class="scoreboard">
       <div class="player" id="human">HUMAN</div>
       <div class="player" id="comp">COMP</div>
-      <span id="human">0</span> : <span id="comp">0</span>
+      <span id="human-score">0</span> : <span id="comp-score">0</span>
     </div>
 
     <div class="result">
@@ -20,15 +22,12 @@
 
     <div class="choices">
       <div id="rock" class="choice"></div>
-      <img src="img/rock.jpeg" />
+      <img width="50" height="50" src="img/rock.jpeg" />
       <div id="paper" class="choice"></div>
-      <img src="img/paper.jpeg" />
+      <img width="50" height="50" src="img/paper.jpeg" />
       <div id="scissors" class="choice"></div>
-      <img src="img/scissors.jpeg" />
-    </div>
-
-    <div>
-      <p class="cta">MAKE YOUR MOVE.</p>
+      <img width="50" height="50" src="img/scissors.jpeg" />
+      <div><p id="cta">MAKE YOUR MOVE.</p></div>
     </div>
 
     <script src="app.js"></script>

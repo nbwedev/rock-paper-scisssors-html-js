@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Asap, sans-serif;
+}
+
+body {
+  background-color: #24272e;
+}
+
+header {
+  background: white;
+  padding: 20px;
+}
+
+header > h1 {
+  color: 11eE1E;
+  text-align: center;
+}
+
+.scoreboard {
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  color: white;
+  font-size: 40px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.player {
+  background-color: orange;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+
+#human {
+  position: absolute;
+  top: 30px;
+  left: -35px;
+}
+
+#comp {
+  position: absolute;
+  top: 30px;
+  right: -25px;
+}
+
+.result {
+  font-size: white;
+  color: white;
+}
+
+.result > p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.choices {
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.choice {
+  display: inline-block;
+  padding: 10px;
+  margin: auto 10px;
+  transition: all 0.4s ease;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+#cta {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 40px 0;
+}
