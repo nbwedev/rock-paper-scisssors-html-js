@@ -78,7 +78,8 @@ header > h1 {
 
 .choice:hover {
   cursor: pointer;
-  background-color: white;
+  background-color: whitesmoke;
+  border-radius: 50%;
 }
 
 #cta {
