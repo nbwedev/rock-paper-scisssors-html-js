@@ -31,10 +31,9 @@ function main() {
 main();
 
 // This functions is the game's core logic that determines winner in  Rock-Paper-Scissors.
-// First, takes the argument of userChoice to receive the player's actual choice from UI.
+// First, it takes the argument of userChoice to receive the player's actual choice from UI.
 // Next, it compares userChoice and computerChoice and decide winner based on arguments provided.
-// The winner is determined through switch-case statement
-
+// The winner is determined through switch-case statement.
 function game(userChoice) {
   let computerChoice = getComputerChoice();
 
@@ -42,19 +41,53 @@ function game(userChoice) {
     case "rockscissors":
     case "scissorspaper":
     case "paperrock":
-      console.log("win");
+      win(userChoice, computerChoice);
       break;
 
     case "rockpaper":
     case "scissorsrock":
     case "paperscissors":
-      console.log("lose");
+      lose(userChoice, computerChoice);
       break;
 
     case "rockrockk":
     case "paperpaer":
     case "scissorsscissors":
-      console.log("draw");
+      draw(userChoice, computerChoice);
       break;
   }
+}
+
+// These functions handle score tracking and display messages based on round outcomes.
+function win(userChoice, computerChoice) {
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${uppercase(userChoice)} beats ${uppercase(
+    computerChoice
+  )}! You win!`;
+}
+
+function lose(userChoice, computerChoice) {
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${uppercase(computerChoice)} beats ${uppercase(
+    userChoice
+  )}! You lose!`;
+}
+
+function draw(userChoice, computerChoice) {
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${uppercase(userChoice)} equals ${uppercase(
+    computerChoice
+  )}! Draw!`;
+}
+
+// This function converts the lowercase letters to uppercase letters then displays in on results.
+function uppercase(choice) {
+  if ((choice = "rock")) return "Rock";
+  if ((choice = "paper")) return "Paper";
+  return "Scissors";
 }
